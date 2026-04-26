@@ -3,8 +3,9 @@ const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 const topLogos = document.querySelectorAll('.top-logo');
 
-const logoDarkModeSrc = 'Novo Projeto TextBranco.png';
-const logoLightModeSrc = 'Novo ProjetoTextPreto.png';
+// CORREÇÃO: Pasta 'assets/' adicionada e contraste alinhado
+const logoDarkModeSrc = 'assets/logo-light.png'; // Logo branca no fundo escuro
+const logoLightModeSrc = 'assets/logo-dark.png'; // Logo preta no fundo claro
 
 function updateLogo(theme) {
     topLogos.forEach(logo => {
