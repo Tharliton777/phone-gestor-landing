@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Phone Gestor ERP</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode login-page-body">
+
+    <div class="bg-glow glow-top" style="left: 50%; transform: translateX(-50%); width: 80vw; top: -20%;"></div>
+
+    <div class="login-wrapper">
+        <a href="index.html" class="btn-back" id="btnBack">← Voltar para o site</a>
+
+        <div class="login-card gemini-border">
+            <div class="login-header">
+                <img src="Novo Projeto TextBranco.png" alt="Phone Gestor ERP" class="login-logo">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Acesse seu painel de controle.</p>
+            </div>
+
+            <form class="login-form" onsubmit="event.preventDefault(); alert('Em breve: Redirecionando para o Dashboard em React! 🚀');">
+                <div class="input-group">
+                    <label for="email">E-mail corporativo</label>
+                    <input type="email" id="email" placeholder="contato@sualoja.com.br" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Lembrar de mim
+                    </label>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-submit btn-login-action">Entrar no Sistema</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Ainda não tem uma conta? <a href="index.html#planos">Escolha um plano</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btnBack').addEventListener('click', function(e) {
+            e.preventDefault(); // Impede o clique seco
+            const link = this.href;
+            document.body.style.opacity = '0'; // Faz a página sumir suavemente
+            setTimeout(() => {
+                window.location.href = link; // Vai pra home depois que sumiu
+            }, 300); // 300ms é o tempo da transição no CSS
+        });
+    </script>
+</body>
+</html>
