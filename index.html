@@ -16,7 +16,7 @@
         <div class="container navbar">
             <div class="logo">Phone Gestor <span>ERP</span></div>
             
-            <nav class="pill-menu">
+            <nav class="pill-menu" id="navMenu">
                 <a href="#" class="active">Home</a>
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#planos">Planos</a>
@@ -40,16 +40,8 @@
         <section class="hero">
             <div class="container hero-content">
                 
-                <div class="hero-badge reveal-up">
-                    <span class="badge-icon">🏆</span> O ERP que mais cresce no Brasil
-                </div>
-
                 <div class="hero-top-info reveal-up delay-1">
                     <img src="assets/logo-dark.png" alt="Phone Gestor ERP" class="top-logo">
-                    <p class="top-description">
-                        Controle de estoque, ordem de serviço e<br>
-                        vendas com ERP, CRM e app mobile.
-                    </p>
                 </div>
 
                 <div class="hero-main-text reveal-up delay-2">
@@ -59,9 +51,8 @@
 
                 <div class="hero-actions reveal-up delay-3">
                     <a href="#contato" class="btn-cta">Quero conhecer agora</a>
-                    <span class="micro-copy">⚡ Liberação imediata e configuração simples.</span>
                     
-                    <div class="avatar-group-wrapper reveal-up delay-4">
+                    <div class="avatar-group-wrapper">
                         <div class="avatar-group">
                             <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="User">
                             <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="User">
@@ -69,6 +60,41 @@
                             <div class="avatar-count">+1.5k</div>
                         </div>
                         <span class="avatar-text">Lojistas já transformaram suas vendas</span>
+                    </div>
+                </div>
+
+                <div class="floating-widgets reveal-up delay-4">
+                    <div class="widget-card float-1">
+                        <div class="widget-left">
+                            <span class="widget-icon">📦</span>
+                            <div class="widget-text">
+                                <span class="widget-label">Estoque por IMEI</span>
+                                <strong class="widget-value">247 aparelhos</strong>
+                            </div>
+                        </div>
+                        <span class="widget-tag tag-green">Ativo</span>
+                    </div>
+
+                    <div class="widget-card float-2">
+                        <div class="widget-left">
+                            <span class="widget-icon">🔧</span>
+                            <div class="widget-text">
+                                <span class="widget-label">OS em andamento</span>
+                                <strong class="widget-value">38 consertos</strong>
+                            </div>
+                        </div>
+                        <span class="widget-tag tag-blue">Em reparo</span>
+                    </div>
+
+                    <div class="widget-card float-3">
+                        <div class="widget-left">
+                            <span class="widget-icon">💰</span>
+                            <div class="widget-text">
+                                <span class="widget-label">Faturamento hoje</span>
+                                <strong class="widget-value">R$ 12.800,59</strong>
+                            </div>
+                        </div>
+                        <span class="widget-tag tag-green">+12%</span>
                     </div>
                 </div>
             </div>
@@ -82,11 +108,11 @@
                         <p>Presentes em todos os estados</p>
                     </div>
                     <div class="metric-item reveal-up delay-2">
-                        <h3 class="gradient-text">+10MM</h3>
+                        <h3 class="gradient-text">+1MM</h3>
                         <p>Processados em vendas</p>
                     </div>
                     <div class="metric-item reveal-up delay-3">
-                        <h3 class="gradient-text">+1.500</h3>
+                        <h3 class="gradient-text">+500</h3>
                         <p>Lojas usam diariamente</p>
                     </div>
                     <div class="metric-item reveal-up delay-4">
@@ -297,7 +323,6 @@
                         <input type="hidden" name="_subject" value="Novo Lead - Phone Gestor ERP!">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        
                         <input type="text" name="Nome" placeholder="Seu Nome Completo" required>
                         <input type="email" name="Email" placeholder="E-mail profissional" required>
                         <input type="tel" name="WhatsApp" placeholder="WhatsApp com DDD" required>

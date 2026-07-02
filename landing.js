@@ -18,15 +18,18 @@ body.classList.remove('dark-mode', 'light-mode');
 body.classList.add(savedTheme);
 updateLogo(savedTheme);
 
-themeToggle.addEventListener('click', () => {
-    const isDark = body.classList.contains('dark-mode');
-    const targetTheme = isDark ? 'light-mode' : 'dark-mode';
-    
-    body.classList.remove('dark-mode', 'light-mode');
-    body.classList.add(targetTheme);
-    localStorage.setItem('theme', targetTheme);
-    updateLogo(targetTheme);
-});
+// FIX: Verifica se o botão de tema existe na página antes de tentar adicionar o evento de clique
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark-mode');
+        const targetTheme = isDark ? 'light-mode' : 'dark-mode';
+        
+        body.classList.remove('dark-mode', 'light-mode');
+        body.classList.add(targetTheme);
+        localStorage.setItem('theme', targetTheme);
+        updateLogo(targetTheme);
+    });
+}
 
 // --- Menu Ativo ---
 const menuLinks = document.querySelectorAll('.pill-menu a');
