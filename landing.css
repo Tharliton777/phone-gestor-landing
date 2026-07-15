@@ -108,7 +108,7 @@ body.light-mode .icon-sun { display: none; }
 /* Hero Section */
 .hero { padding: 7rem 0 6rem; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; text-align: center; position: relative; }
 
-/* --- NOVO: Status Badge Piscante --- */
+/* --- Status Badge Piscante --- */
 .status-badge {
     display: inline-flex;
     align-items: center;
@@ -179,7 +179,7 @@ body.light-mode .icon-sun { display: none; }
 .avatar-count { background: var(--metric-gradient); color: #0f172a; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.7rem; z-index: 1; }
 .avatar-text { font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; }
 
-/* --- NOVO: Floating Dashboard Widgets --- */
+/* --- Floating Dashboard Widgets --- */
 .floating-widgets {
     display: flex;
     flex-direction: row; /* Coloca um ao lado do outro */
@@ -194,31 +194,42 @@ body.light-mode .icon-sun { display: none; }
 }
 
 .widget-card {
-    background: #0d0d0f;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-card); /* Alteração: Muda dinamicamente com o tema */
+    border: 1px solid var(--border-color); /* Alteração: Borda sutil de acordo com o tema */
     border-radius: 16px;
     padding: 1.2rem 1.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: box-shadow 0.4s ease, border-color 0.4s ease; /* Transição apenas na sombra agora */
+    transition: box-shadow 0.4s ease, border-color 0.4s ease; 
     cursor: default;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: var(--shadow); /* Alteração: Sombra leve no modo claro, profunda no escuro */
     flex: 1 1 300px; /* Faz os cards terem a mesma largura base */
     max-width: 350px;
 }
 
-/* Hover sem zoom, apenas ativando o brilho azul premium */
+/* Hover sem zoom, apenas ativando o brilho azul premium suave */
 .widget-card:hover {
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2); 
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15); 
     border-color: rgba(37, 99, 235, 0.4);
 }
 
 .widget-left { display: flex; align-items: center; gap: 1.2rem; }
 .widget-icon { font-size: 1.6rem; }
 .widget-text { display: flex; flex-direction: column; text-align: left; }
-.widget-label { font-size: 0.8rem; color: #a1a1aa; font-weight: 500; margin-bottom: 0.2rem; }
-.widget-value { font-size: 1.2rem; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;}
+
+.widget-label { 
+    font-size: 0.8rem; 
+    color: var(--text-secondary); /* Alteração: Cinza adaptável */
+    font-weight: 500; 
+    margin-bottom: 0.2rem; 
+}
+.widget-value { 
+    font-size: 1.2rem; 
+    color: var(--text-primary); /* Alteração: Preto no modo claro, branco no modo escuro */
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+}
 
 .widget-tag { font-size: 0.75rem; font-weight: 700; padding: 0.4rem 0.8rem; border-radius: 50px; white-space: nowrap; }
 .tag-green { color: #4ade80; background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.2); }
