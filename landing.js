@@ -3,7 +3,6 @@ const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 const topLogos = document.querySelectorAll('.top-logo');
 
-// CORREÇÃO: Pasta 'assets/' adicionada e contraste alinhado
 const logoDarkModeSrc = 'assets/logo-light.png'; // Logo branca no fundo escuro
 const logoLightModeSrc = 'assets/logo-dark.png'; // Logo preta no fundo claro
 
@@ -18,7 +17,7 @@ body.classList.remove('dark-mode', 'light-mode');
 body.classList.add(savedTheme);
 updateLogo(savedTheme);
 
-// FIX: Verifica se o botão de tema existe na página antes de tentar adicionar o evento de clique
+// Verifica se o botão de tema existe na página antes de tentar adicionar o evento de clique
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         const isDark = body.classList.contains('dark-mode');
